@@ -1,0 +1,16 @@
+{
+  "name": "test_bot_discord",
+  "version": "1.0.0",
+  "description": "This bot is incredible and so useless at the same time woaw",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fabien5525",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "fs": "0.0.1-security",
+    "moment": "^2.24.0"
+  }
+}
