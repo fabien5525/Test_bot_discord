@@ -1,3 +1,19 @@
 {
-    
-}
+    "2":{
+    "name":"armure_en_toile",
+    "type":"armure",
+    "desc":"ceci_est_une_belle_armure",
+    "stats":{"ad":0,
+    "ap":0,
+    "ar":5,
+    "rm":0,
+    "hp":5,
+    "mp":0,
+    "tc":0,
+    "do":0,
+    "lvl":1,
+    "rar":0,
+    "cc":0},
+"effect":{},
+"classe":0
+}}

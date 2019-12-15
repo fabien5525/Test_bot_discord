@@ -24,14 +24,13 @@ module.exports.run = (client, message, args) => {
                 message.channel.send(`${user.tag} à désormais ${bdd[user.id].xp} xp`);
             }
         });
-        //xpUpdate(user);
+        console.log(`YO LSQOKSNOINSQSN`);
+        xpUpdate(user); //prob
         //hpmpUpdate(user);
     }
     else {
         message.channel.send(`Vous n'avez pas la permission pour cette commande.`);
-    }
-
-    
+    }   
 };
 
 

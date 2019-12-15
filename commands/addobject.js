@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const fs = require("fs");
 
 module.exports.run = (client, message, args) => {
-    //console.log(args.length);
-    if (args.length != 13) return message.channel.send("Il y a pas assez / trop d'arguments");
+    console.log(`new object : ${args[1]} , nb of args : ${args.length}, rareté : ${args[13]}`);
+    if (args.length != 15) return message.channel.send("Il y a pas assez / trop d'arguments");
     if (message.member.roles.find(role => role.name === "ModoBot5525")) {
         let newobject = false;
         let id = args[0];
@@ -36,10 +36,18 @@ module.exports.run = (client, message, args) => {
 
         // format : id name type desc  ad ap   ar rm   hp  mp  tc  do    lvl  rar  classe
         //  args : [0] [1] [2]   [3]  [4] [5] [6] [7] [8] [9] [10] [11] [12]  [13] [14]
-        
-        if (0>parseInt(args[12], 10) || parseInt(args[12], 10) < 4) return message.channel.send(`Erreur, la rareté n'est pas compris entre [0;4]`);
+        //console.log(parseInt(args[13], 10));
+        if (0>parseInt(args[13], 10) || parseInt(args[13], 10) > 4) return message.channel.send(`Erreur, la rareté n'est pas compris entre [0;4]`); //verif la rareté
 
-        object[id].name = args[1];
+        let name = args[1];
+        let desc = args[3];
+        for (let i=0; i<name.length ;i++){
+            if (name[i] == '_') name[i] = '7';
+        }
+
+        console.log(`var name : ${name}`);
+        
+        object[id].name = name;
         object[id].type = args[2];
         object[id].desc = args[3];
         object[id].stats.ad = parseInt(args[4], 10);

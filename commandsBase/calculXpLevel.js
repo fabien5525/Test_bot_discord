@@ -1,5 +1,3 @@
-
-
 const  XP_LEVEL1 = 200;
 
 function calculXpLevelA(level, xpPastLevel) {
