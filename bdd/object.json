@@ -1,19 +1,39 @@
 {
+    "1":{
+        "name":"Epee en bois",
+        "type":"we.1",
+        "desc":"Arme de corps à corps permettant de battre de faible enemie",
+        "stats":{"ad":5,
+        "ap":0,
+        "ar":0,
+        "rm":0,
+        "hp":0,
+        "mp":0,
+        "tc":0,
+        "do":2,
+        "lvl":1,
+        "rar":0,
+        "cc":2},
+        "effect":{},
+        "classe":0},
     "2":{
-    "name":"armure_en_toile",
-    "type":"armure",
-    "desc":"ceci_est_une_belle_armure",
-    "stats":{"ad":0,
-    "ap":0,
-    "ar":5,
-    "rm":0,
-    "hp":5,
-    "mp":0,
-    "tc":0,
-    "do":0,
-    "lvl":1,
-    "rar":0,
-    "cc":0},
-"effect":{},
-"classe":0
-}}
+        "name":"armure en toile",
+        "type":"ar.ch",
+        "desc":"ceci est une belle armure",
+        "stats":{
+            "ad":0,
+            "ap":0,
+            "ar":5,
+            "rm":0,
+            "hp":5,
+            "mp":0,
+            "tc":0,
+            "do":0,
+            "lvl":1,
+            "rar":0,
+            "cc":0
+        },
+        "effect":{},
+        "classe":0
+    }
+}

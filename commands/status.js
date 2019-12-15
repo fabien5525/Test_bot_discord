@@ -17,13 +17,25 @@ module.exports.run = (client, message, args) =>{
                 "coin": 0,
                 "lvl": 1,
                 "xp": 0,
+                "ad": 1,
+                "ap": 1,
+                "ar": 5,
+                "rm": 5,
                 "hp": 10,
                 "mp": 10,
-                "money":0,
-                "hplost":0,
-                "mplost":0
+                "cc": 1,
+                "do": 1,
+                "money": 0,
+                "adlost": 0,
+                "aplost": 0,
+                "arlost": 0,
+                "rmlost": 0,
+                "hplost": 0,
+                "mplost": 0,
+                "cclost": 0,
+                "dolost": 0  
             }
-            console.log('No user found in bdd ! Creating new values...');
+            console.log(`${user.id} non trouvé dans la bdd, création de données pour ${user.tag}`);
     }
     fs.writeFile("./bdd/bdd.json", JSON.stringify(bdd), (err) => {
         if(err) message.channel.send("Une erreur est survenue");
@@ -36,9 +48,12 @@ module.exports.run = (client, message, args) =>{
         .setTitle(`Statistique du joueur : `)
         .addField(`Niveau : `, bdd[user.id].lvl)
         .addField(`Expérience : `, `${bdd[user.id].xp} / ${calculXpLevel(bdd[user.id].lvl)}`)
-        .addField(`Point de vie : `, bdd[user.id].hp)
-        .addField(`Point de Mana : `, bdd[user.id].mp)
-        .addField(`Argent : `, bdd[user.id].money);
+        .addField(`Point de vie | Point de mana : `, `${bdd[user.id].hp - bdd[user.id].hplost} | ${bdd[user.id].mp - bdd[user.id].mplost}`)
+        .addField(`Attaque physique | Attaque magique : `, `${bdd[user.id].ad - bdd[user.id].adlost} | ${bdd[user.id].ap - bdd[user.id].aplost}`)
+        .addField(`Resistance physique |Resistance magique : `, `${bdd[user.id].ar - bdd[user.id].arlost} | ${bdd[user.id].rm - bdd[user.id].rmlost}`)
+        .addField(`Chance de critique | Esquive : `, `${bdd[user.id].cc - bdd[user.id].cclost} | ${bdd[user.id].do - bdd[user.id].dolost}`)
+        .addField(`Argent : `, bdd[user.id].money)
+       
 
     message.channel.send(about_message);
     

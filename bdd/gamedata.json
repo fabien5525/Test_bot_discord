@@ -72,6 +72,33 @@
             "co":"collier",
             "br":"bracelet"
         }
+    },
+    "rarity":
+    {
+        "0":
+        {
+            "name":"commun"
+        },
+        "1":
+        {
+            "name":"rare"
+        },
+        "2":
+        {
+            "name":"épique"
+        },
+        "3":
+        {
+            "name":"légendaire"
+        },
+        "4":
+        {
+            "name":"boss"
+        },
+        "5":
+        {
+            "name":"unique"
+        }
     }
 }
 
