@@ -8,22 +8,6 @@ module.exports.run = (client, message, args) => {
         const object = JSON.parse(fs.readFileSync("./bdd/object.json", "utf8"));
         if(!object[id]) return message.channel.send(`l'objet de id : ${id} n'existe pas`);
         else { //verification of the presence of the object
-            const about_message = new Discord.RichEmbed()
-            .setColor('#66ffff')
-            .setAuthor(`Statistique de l\'objet **${object[id].name}**`)
-            .setTitle(`Type : `)
-            .addField(`Niveau : `, bdd[user.id].lvl)
-            .addField(`Classe nécessaire : : `, object[id].classe)
-            
-
-            .addField(`Point de vie | Point de mana : `, `${bdd[user.id].hp - bdd[user.id].hplost} | ${bdd[user.id].mp - bdd[user.id].mplost}`)
-            .addField(`Attaque physique | Attaque magique : `, `${bdd[user.id].ad - bdd[user.id].adlost} | ${bdd[user.id].ap - bdd[user.id].aplost}`)
-            .addField(`Resistance physique |Resistance magique : `, `${bdd[user.id].ar - bdd[user.id].arlost} | ${bdd[user.id].rm - bdd[user.id].rmlost}`)
-            .addField(`Chance de critique | Esquive : `, `${bdd[user.id].cc - bdd[user.id].cclost} | ${bdd[user.id].do - bdd[user.id].dolost}`)
-            .addField(`Argent : `, bdd[user.id].money)
-       
-
-            message.channel.send(about_message);
             message.channel.send({
                 embed: {
                     color: 0xe43333,
@@ -68,8 +52,8 @@ module.exports.run = (client, message, args) => {
                             name: 'Rareté :',
                             value: object[id].stats.ra
                         }       
-                    ]
-                }
+                    ],
+                },
             });
         }
     } 
@@ -78,6 +62,6 @@ module.exports.run = (client, message, args) => {
 
 
 module.exports.help = {
-    name: 'displayobject',
-    description: 'affiche l\'item en fonction de son id'
+    name: 'displaymonster',
+    description: 'affiche le monstre en fonction de son id'
 };

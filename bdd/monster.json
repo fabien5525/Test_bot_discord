@@ -1,0 +1,28 @@
+{
+    "1":
+    {
+        "nom": "mannequin d'entrainement",
+        "lvl": 1,
+        "xp":0,
+        "stats":
+        {
+            "ad": 0,
+            "ap": 0,
+            "ar": 2,
+            "rm": 2,
+            "hp": 10,
+            "mp": 10,
+            "cc": 1,
+            "do": 1,
+            "money": 0,
+            "adlost": 0,
+            "aplost": 0,
+            "arlost": 0,
+            "rmlost": 0,
+            "hplost": 0,
+            "mplost": 0,
+            "cclost": 0,
+            "dolost": 0
+        }
+    }
+}

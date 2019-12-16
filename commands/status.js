@@ -14,7 +14,6 @@ module.exports.run = (client, message, args) =>{
     let bdd = JSON.parse(fs.readFileSync("./bdd/bdd.json", "utf8"));
     if(!bdd[user.id]){ //verification of the presence of the user
             bdd[user.id] = {
-                "coin": 0,
                 "lvl": 1,
                 "xp": 0,
                 "ad": 1,
@@ -33,7 +32,28 @@ module.exports.run = (client, message, args) =>{
                 "hplost": 0,
                 "mplost": 0,
                 "cclost": 0,
-                "dolost": 0  
+                "dolost": 0,
+                "inv":{},
+                "eqstuff":
+                {
+                    "we":
+                    {
+                        "1":"",
+                        "2":""
+                    },
+                    "ar":
+                    {
+                        "he":"",
+                        "ch":"",
+                        "le":"",
+                        "bo":""
+                    },
+                    "ac":
+                    {
+                        "co":"",
+                        "br":""
+                    }
+                }  
             }
             console.log(`${user.id} non trouvé dans la bdd, création de données pour ${user.tag}`);
     }
